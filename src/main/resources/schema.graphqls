@@ -1,3 +1,13 @@
 type Query {
     hello(who: String): String!
 }
+
+type Mutation {
+    createPerson(firstName: String!, lastName: String!): Person!
+}
+
+type Person {
+    id: Int!
+    firstName: String!
+    lastName: String!
+}

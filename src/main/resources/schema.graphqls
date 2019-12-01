@@ -11,4 +11,5 @@ type Person {
     id: Int!
     firstName: String!
     lastName: String!
+    fullName: String!
 }

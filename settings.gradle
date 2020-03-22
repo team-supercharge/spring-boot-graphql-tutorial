@@ -1,1 +1,9 @@
+buildscript {
+    pluginManagement {
+        repositories {
+            gradlePluginPortal()
+        }
+    }
+}
+
 rootProject.name = 'graphql'

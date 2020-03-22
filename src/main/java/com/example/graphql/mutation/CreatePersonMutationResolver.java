@@ -1,8 +1,8 @@
 package com.example.graphql.mutation;
 
-import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.example.graphql.model.Person;
 import com.example.graphql.service.PersonService;
+import graphql.kickstart.tools.GraphQLMutationResolver;
 import org.springframework.stereotype.Service;
 
 @Service

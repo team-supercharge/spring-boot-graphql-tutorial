@@ -1,9 +1,10 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.4.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-	id 'org.jetbrains.kotlin.jvm' version '1.3.60'
+	id 'org.springframework.boot' version "$springBootVersion"
+	id 'org.jetbrains.kotlin.jvm' version "$kotlinVersion"
 	id 'java'
 }
+
+apply plugin: 'io.spring.dependency-management'
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
@@ -13,10 +14,14 @@ repositories {
 	mavenCentral()
 }
 
+wrapper {
+	distributionType = Wrapper.DistributionType.ALL
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'com.graphql-java-kickstart:graphql-spring-boot-starter:6.0.1'
-	runtimeOnly 'com.graphql-java-kickstart:graphiql-spring-boot-starter:6.0.1'
+	implementation "com.graphql-java-kickstart:graphql-spring-boot-starter:$graphqlKickstartVersion"
+	runtimeOnly "com.graphql-java-kickstart:graphiql-spring-boot-starter:$graphqlKickstartVersion"
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'

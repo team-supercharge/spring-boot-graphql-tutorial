@@ -1,7 +1,8 @@
 package com.example.graphql.query;
 
-import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import java.util.Optional;
+
+import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.springframework.stereotype.Service;
 
 @Service
